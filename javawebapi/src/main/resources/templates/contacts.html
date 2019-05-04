@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Data Table</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Sex</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Phone Number</th>
+    </tr>
+    <tr th:each="contact : ${contactList}">
+        <td th:text="${contact.fname}"/>
+        <td th:text="${contact.lname}"/>
+        <td th:text="${contact.address}"/>
+        <td th:text="${contact.email}"/>
+        <td th:text="${contact.sex}"/>
+        <td th:text="${contact.state}"/>
+        <td th:text="${contact.city}"/>
+        <td th:text="${contact.country}"/>
+        <td th:text="${contact.phoneNumber}"/>
+    </tr>
+</table>
+</body>
+</html>
